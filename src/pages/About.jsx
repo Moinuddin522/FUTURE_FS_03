@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 const About = () => {
   return (
     <MainLayout>
-      <h1>About Us</h1>
+      <h1>About SmileCare Dental Clinic</h1>
     </MainLayout>
   );
 };
