@@ -1,9 +1,10 @@
 import MainLayout from "../layouts/MainLayout";
+import Hero from "../components/Hero/Hero";
 
 const Home = () => {
   return (
     <MainLayout>
-      <h1>Welcome to SmileCare Dental Clinic</h1>
+      <Hero />
     </MainLayout>
   );
 };
