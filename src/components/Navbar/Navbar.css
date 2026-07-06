@@ -1,102 +1,129 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbar{
+
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-a {
-  text-decoration: none;
+.navbar-container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
 }
 
-li {
-  list-style: none;
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:30px;
+    font-weight:700;
+    color:#2563eb;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: white;
-  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+.logo-icon{
+
+    font-size:32px;
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
+.nav-menu{
+
+    display:flex;
+    align-items:center;
+    gap:35px;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #2563eb;
+.nav-menu a{
+
+    font-size:17px;
+    font-weight:500;
+    color:#334155;
+    transition:.3s;
 }
 
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.nav-menu a:hover{
+
+    color:#2563eb;
 }
 
-.nav-menu a {
-  color: #334155;
-  font-weight: 500;
-  transition: .3s;
+.nav-menu a.active{
+
+    color:#2563eb;
+    font-weight:600;
 }
 
-.nav-menu a:hover {
-  color: #2563eb;
+.appointment-btn{
+
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
 }
 
-.nav-menu a.active {
-  color: #2563eb;
-  font-weight: bold;
+.appointment-btn:hover{
+
+    background:#1d4ed8;
+    transform:translateY(-2px);
 }
 
-.book-btn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
-  cursor: pointer;
-  transition: .3s;
+.menu-icon{
+
+    display:none;
+    font-size:34px;
+    cursor:pointer;
+    color:#2563eb;
 }
 
-.book-btn:hover {
-  background: #1d4ed8;
+@media(max-width:768px){
+
+.menu-icon{
+
+display:block;
+
 }
 
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
+.appointment-btn{
+
+display:none;
+
 }
 
-@media (max-width: 768px) {
+.nav-menu{
 
-  .hamburger {
-    display: block;
-  }
+position:absolute;
 
-  .nav-menu {
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    padding: 30px 0;
-    transition: .4s;
-    box-shadow: 0 5px 10px rgba(0,0,0,.1);
-  }
+top:80px;
+left:0;
 
-  .nav-menu.active {
-    left: 0;
-  }
+width:100%;
 
-  .book-btn {
-    margin-top: 10px;
-  }
+background:white;
+
+flex-direction:column;
+
+padding:30px 0;
+
+display:none;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.nav-menu.active{
+
+display:flex;
+
+}
+
 }
