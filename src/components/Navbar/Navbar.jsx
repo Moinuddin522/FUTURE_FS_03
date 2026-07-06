@@ -1,21 +1,49 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <nav className="navbar">
-      <div className="container">
-        <h2 className="logo">SmileCare</h2>
+    <header className="navbar">
+      <div className="container navbar-container">
+        <NavLink to="/" className="logo">
+          SmileCare
+        </NavLink>
 
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
+        <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
+          <NavLink to="/" end onClick={closeMenu}>
+            Home
+          </NavLink>
 
-        <button className="btn">Book Appointment</button>
+          <NavLink to="/about" onClick={closeMenu}>
+            About
+          </NavLink>
+
+          <NavLink to="/services" onClick={closeMenu}>
+            Services
+          </NavLink>
+
+          <NavLink to="/contact" onClick={closeMenu}>
+            Contact
+          </NavLink>
+
+          <button className="book-btn">
+            Book Appointment
+          </button>
+        </nav>
+
+        <div
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
