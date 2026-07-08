@@ -18,25 +18,21 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section className="gallery">
+    <section className="gallery" id="gallery">
       <div className="container">
 
         <div className="section-title">
           <h2>Our Clinic Gallery</h2>
-
           <p>
-            Take a look at our modern facilities and
-            comfortable treatment environment.
+            Take a look at our modern facilities and comfortable
+            treatment environment.
           </p>
         </div>
 
         <div className="gallery-grid">
           {images.map((image, index) => (
-            <div className="gallery-card" key={index}>
-              <img
-                src={image}
-                alt={`Gallery ${index + 1}`}
-              />
+            <div className="gallery-item" key={index}>
+              <img src={image} alt={`Gallery ${index + 1}`} />
             </div>
           ))}
         </div>
