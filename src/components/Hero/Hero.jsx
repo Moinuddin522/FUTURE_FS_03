@@ -1,70 +1,22 @@
-import "./Hero.css";
-import heroImage from "../../assets/hero.jpg";
+import MainLayout from "../layouts/MainLayout";
+import Hero from "../components/Hero/Hero";
+import Features from "../components/Features/Features";
+import Services from "../components/Services/Services";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Gallery from "../components/Gallery/Gallery";
+import ContactSection from "../components/ContactSection/ContactSection";
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section className="hero">
-      <div className="container hero-container">
-
-        <div className="hero-content">
-
-          <span className="hero-badge">
-            🦷 Trusted Dental Clinic
-          </span>
-
-          <h1>
-            Healthy Smiles
-            <br />
-            Begin Here
-          </h1>
-
-          <p>
-            We provide advanced dental care with experienced professionals,
-            state-of-the-art technology, and personalized treatment plans
-            for the entire family.
-          </p>
-
-          <div className="hero-buttons">
-            <button className="primary-btn">
-              Book Appointment
-            </button>
-
-            <button className="secondary-btn">
-              Our Services
-            </button>
-          </div>
-
-          <div className="hero-stats">
-
-            <div>
-              <h2>5000+</h2>
-              <span>Happy Patients</span>
-            </div>
-
-            <div>
-              <h2>15+</h2>
-              <span>Years Experience</span>
-            </div>
-
-            <div>
-              <h2>10+</h2>
-              <span>Expert Dentists</span>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div className="hero-image">
-          <img
-            src={heroImage}
-            alt="SmileCare Dental Clinic"
-          />
-        </div>
-
-      </div>
-    </section>
+    <MainLayout>
+      <Hero />
+      <Features />
+      <Services />
+      <Testimonials />
+      <Gallery />
+      <ContactSection />
+    </MainLayout>
   );
 };
 
-export default Hero;
+export default Home;
