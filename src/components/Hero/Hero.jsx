@@ -1,58 +1,67 @@
 import "./Hero.css";
+import heroImage from "../../assets/hero.jpg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="container hero-container">
+
         <div className="hero-content">
+
           <span className="hero-badge">
             🦷 Trusted Dental Clinic
           </span>
 
           <h1>
-            Your Smile,
+            Healthy Smiles
             <br />
-            Our Priority
+            Begin Here
           </h1>
 
           <p>
-            Experience world-class dental care with modern equipment,
-            experienced dentists, and personalized treatment for your
-            entire family.
+            We provide advanced dental care with experienced professionals,
+            state-of-the-art technology, and personalized treatment plans
+            for the entire family.
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">
+            <button className="primary-btn">
               Book Appointment
             </button>
 
-            <button className="btn-secondary">
-              Learn More
+            <button className="secondary-btn">
+              Our Services
             </button>
           </div>
 
           <div className="hero-stats">
-            <div className="stat">
+
+            <div>
               <h2>5000+</h2>
-              <p>Happy Patients</p>
+              <span>Happy Patients</span>
             </div>
 
-            <div className="stat">
+            <div>
               <h2>15+</h2>
-              <p>Years Experience</p>
+              <span>Years Experience</span>
             </div>
 
-            <div className="stat">
+            <div>
               <h2>10+</h2>
-              <p>Expert Dentists</p>
+              <span>Expert Dentists</span>
             </div>
+
           </div>
+
         </div>
 
-        <div className="hero-image placeholder">
-          <h2>🦷</h2>
-          <p>Dental Clinic Image</p>
+        <div className="hero-image">
+          <img
+            src={heroImage}
+            alt="SmileCare Dental Clinic"
+          />
         </div>
+
       </div>
     </section>
   );
