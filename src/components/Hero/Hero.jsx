@@ -3,7 +3,7 @@ import heroImage from "../../assets/hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="container hero-container">
 
         <div className="hero-content">
@@ -25,6 +25,7 @@ const Hero = () => {
           </p>
 
           <div className="hero-buttons">
+
             <button className="primary-btn">
               Book Appointment
             </button>
@@ -32,21 +33,22 @@ const Hero = () => {
             <button className="secondary-btn">
               Our Services
             </button>
+
           </div>
 
           <div className="hero-stats">
 
-            <div>
+            <div className="stat-box">
               <h2>5000+</h2>
               <span>Happy Patients</span>
             </div>
 
-            <div>
+            <div className="stat-box">
               <h2>15+</h2>
               <span>Years Experience</span>
             </div>
 
-            <div>
+            <div className="stat-box">
               <h2>10+</h2>
               <span>Expert Dentists</span>
             </div>
@@ -56,10 +58,7 @@ const Hero = () => {
         </div>
 
         <div className="hero-image">
-          <img
-            src={heroImage}
-            alt="SmileCare Dental Clinic"
-          />
+          <img src={heroImage} alt="SmileCare Dental Clinic" />
         </div>
 
       </div>

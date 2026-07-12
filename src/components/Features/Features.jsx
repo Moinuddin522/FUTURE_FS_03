@@ -29,20 +29,32 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="features">
+    <section
+      className="features"
+      id="about"
+      data-aos="fade-up"
+    >
       <div className="container">
         <div className="section-title">
           <h2>Why Choose SmileCare?</h2>
+
           <p>
-            We combine expertise, technology, and compassionate care to give
-            every patient the best dental experience.
+            We combine expertise, technology, and compassionate care to
+            give every patient the best dental experience.
           </p>
         </div>
 
         <div className="features-grid">
           {features.map((feature, index) => (
-            <div className="feature-card" key={index}>
-              <div className="feature-icon">{feature.icon}</div>
+            <div
+              className="feature-card"
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+              <div className="feature-icon">
+                {feature.icon}
+              </div>
 
               <h3>{feature.title}</h3>
 

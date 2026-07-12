@@ -23,36 +23,41 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="testimonials">
+    <section
+      className="testimonials"
+      id="testimonials"
+      data-aos="fade-up"
+    >
       <div className="container">
 
         <div className="section-title">
           <h2>What Our Patients Say</h2>
+
           <p>
-            Thousands of happy patients trust SmileCare for their dental health.
+            Thousands of happy patients trust SmileCare
+            for their dental health.
           </p>
         </div>
 
-        <div className="testimonial-grid">
-
+        <div className="testimonials-grid">
           {testimonials.map((item, index) => (
-            <div className="testimonial-card" key={index}>
-
+            <div
+              className="testimonial-card"
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 150}
+            >
               <div className="stars">
                 ⭐⭐⭐⭐⭐
               </div>
 
-              <p className="review">
-                "{item.review}"
-              </p>
+              <p>"{item.review}"</p>
 
-              <h3>{item.name}</h3>
+              <h4>{item.name}</h4>
 
               <span>{item.role}</span>
-
             </div>
           ))}
-
         </div>
 
       </div>
