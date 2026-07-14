@@ -1,50 +1,67 @@
 import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
-import { FaTooth } from "react-icons/fa";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <header className="navbar">
-      <div className="container navbar-container">
-        <Link to="/" className="logo">
-          <FaTooth className="logo-icon" />
-          <span>SmileCare</span>
-        </Link>
+    <nav className="navbar">
+      <div className="container nav-container">
 
-        <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
-            Home
-          </NavLink>
+        <div className="logo">
+          🦷 SmileCare
+        </div>
 
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-            About
-          </NavLink>
+        <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-          <NavLink to="/services" onClick={() => setMenuOpen(false)}>
-            Services
-          </NavLink>
+          <li>
+            <a href="#home" onClick={closeMenu}>
+              Home
+            </a>
+          </li>
 
-          <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </NavLink>
-        </nav>
+          <li>
+            <a href="#services" onClick={closeMenu}>
+              Services
+            </a>
+          </li>
 
-        <button className="appointment-btn">
-          Book Appointment
-        </button>
+          <li>
+            <a href="#gallery" onClick={closeMenu}>
+              Gallery
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#contact"
+              className="book-btn"
+              onClick={closeMenu}
+            >
+              Book Appointment
+            </a>
+          </li>
+
+        </ul>
 
         <div
           className="menu-icon"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <HiOutlineMenuAlt3 />
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
+
       </div>
-    </header>
+    </nav>
   );
 };
 

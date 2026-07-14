@@ -26,13 +26,13 @@ const Hero = () => {
 
           <div className="hero-buttons">
 
-            <button className="primary-btn">
+            <a href="#contact" className="primary-btn">
               Book Appointment
-            </button>
+            </a>
 
-            <button className="secondary-btn">
+            <a href="#services" className="secondary-btn">
               Our Services
-            </button>
+            </a>
 
           </div>
 
@@ -58,7 +58,10 @@ const Hero = () => {
         </div>
 
         <div className="hero-image">
-          <img src={heroImage} alt="SmileCare Dental Clinic" />
+          <img
+            src={heroImage}
+            alt="SmileCare Dental Clinic"
+          />
         </div>
 
       </div>
